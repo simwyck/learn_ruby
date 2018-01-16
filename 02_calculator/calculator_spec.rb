@@ -78,15 +78,36 @@ end
 # write tests and code for the following:
 
 describe "#multiply" do
+  it "multiplies two numbers" do
+    # On multiplie 2 par 3.
+    expect(multiply(2,3)).to eq(6)
+  end
 
-  it "multiplies two numbers"
+  it "multiplies several numbers" do
+    # On multiplie plusieurs nombres entre eux.
+    expect(multiply(2,3,4,5)).to eq(120)
+  end
 
-  it "multiplies several numbers"
-  
 end
 
 describe "#power" do
-  it "raises one number to the power of another number"
+# Piqué à @David sur Slack.
+  it "raises one number to the power of another number" do
+     expect(power(7, 3)).to eq(343)
+  end
+
+  it "raises one number to the power of another decimal number" do
+    expect(power(4, 0.5)).to eq(2)
+  end
+
+  it "raises one number to the power of another negative number" do
+    expect(power(7, -2)).to eq(0.02040816326530612)
+  end
+
+  it "raises one negative number to the power of another decimal number" do
+    expect(power(-7, 0.5)).to eq(-2.6457513110645907)
+  end
+
 end
 
 # http://en.wikipedia.org/wiki/Factorial

@@ -1,3 +1,8 @@
 class Book
-# write your code here
+  def initialize(book)
+  @book = book
+  end
 end
+
+@book.title = ""
+@book.title = title.capitalize
