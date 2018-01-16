@@ -7,15 +7,16 @@ def echo (greetings)
   end
 end
 
-# Ne fonctionne pas.
-def shout (shouting)
-  unless shouting == "HELLO"
-    shouting = "hello".upcase
-  else
-    shouting = "hello world".upcase
-  end
+# La méthode renvoie un ou plusieurs mots en majuscules.
+def shout (yeah)
+  yeah = yeah.upcase!
+  return yeah
 end
 
-def repeat
-  "hello"
+# Pas fini
+def repeat(word,n=2)
+  result = (word + " ") * n
+  result = result.chomp(" ")
+  return result
 end
+# str = str[0...-n] A essayer
